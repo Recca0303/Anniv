@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./first.css">
+</head>
+<body>
+    <marquee behavior="" direction="left">LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU LOVEU </marquee>
+    <header class="music">
+        <div class="player">    
+            <div class="title">I Love You </div>
+            <p>by Avril Lavigne</p>
+            <audio id="audio" src="I_Love_You(256k).mp3"></audio>
+        
+            <div class="controls">
+              <button class="play-btn" id="playPause">Play</button>
+            </div>
+        
+            <div class="progress">
+              <div class="progress-filled" id="progressFilled"></div>
+            </div>
+          </div>
+        </header>
+
+        
+    <section class="gallery-section">
+    <div class="img-container">
+		<div id="carousel">
+			<figure><img src="bg1.jpg" alt=""></figure>
+			<figure><img src="bg2.jpg" alt=""></figure>
+            <figure><img src="bg3.jpg" alt=""></figure>
+            <figure><img src="bg4.jpg" alt=""></figure>
+            <figure><img src="bg5.jpg" alt=""></figure>
+            <figure><img src="bg6.jpg" alt=""></figure>
+            <figure><img src="bg7.jpg" alt=""></figure>
+            <figure><img src="bg8.jpg" alt=""></figure>
+            <figure><img src="bg9.jpg" alt=""></figure>
+		</div>
+	</div>
+</section>
+
+<section class="time-section">
+    <h1>How long we've been together?</h1>
+    <div id="emoji-particle-container"></div>
+    <div class="time-container">
+        <div id="time-display">
+            <p id="time"></p>
+        </div>
+    </div>
+    </section>
+    
+<section class="scratcher-section">
+    <h3 class="scratch-font">SCRATCH ME</h3>
+    <div class="scratch-container">
+        <div class="hidden-content"><video src="scratcher.mp4" autoplay loop muted></video></div>
+        <canvas id="scratchCanvas" width="350" height="400"></canvas>
+      </div>
+
+</section>
+<section class="letter">
+    <h1>HAPPY ANNIVERSARY !</h1>
+
+    <p id="message"></p>
+    <button onclick="showMessage()">3 click</button>
+
+    <button onclick="showLoveLetter()">1 letter</button>
+    <div id="loveLetter" class="love-letter">
+      <p>ahsbdasdaijda</p>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur iure veniam odio aut asperiores minus repellendus unde voluptatem? Consectetur ipsam et temporibus nemo cum omnis soluta. Dicta autem facere temporibus!</p>
+    </div>
+
+    <button onclick="showLoveLetter2()">1 letter</button>
+    <div id="loveLetter2" class="love-letter">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur iure veniam odio aut asperiores minus repellendus unde voluptatem? Consectetur ipsam et temporibus nemo cum omnis soluta. Dicta autem facere temporibus!</p>
+    </div>
+  </section>
+
+    <script src="./first.js"></script>
+</body>
+</html>

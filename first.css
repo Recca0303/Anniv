@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: rgb(255, 239, 242);
+    
+}
+.letter{
+    height: 400px;
+}
+.time-section{
+
+    
+}
+.gallery-section{
+   
+    height: 300px;
+}
+.scratcher-section{
+    height: 500px;
+}
+.music {
+    height: 150px;
+    display: flex;
+    justify-content: center;   /* centers horizontally */
+  
+}
+
+.time-container {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+ .time-section h1{
+    font-size: large;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+#time-display {
+    
+   font-family:  'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';   
+    background-color: #ff7ac3;
+    padding: 1px;
+    border-radius: 10px;
+    color: #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#time {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+#emoji-particle-container {
+    position: fixed; /* Make container fixed so it covers the entire screen */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none; /* Allow interaction with underlying elements */
+    z-index: 9999; /* Ensure it appears on top */
+}
+
+.emoji-particle {
+    position: absolute;
+    font-size: 30px;
+    animation: floatEmoji 5s ease-in-out infinite;
+    opacity: 0; /* Start as invisible */
+}
+
+@keyframes floatEmoji {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(50px, -100px);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+
+
+html,
+body{
+	min-height: 100%;
+}
+
+h1{
+	display: table;
+	margin: 5% auto 0;
+	text-transform: uppercase;
+	font-family: 'Anaheim', sans-serif;
+	font-size: 4em;
+	font-weight: 400;
+	text-shadow: 0 1px white, 0 2px black;
+}
+.img-container{
+	margin: 10% auto;
+	width: 210px;
+	height: 140px;
+	position: relative;
+	perspective: 1000px;
+}
+
+#carousel figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Makes the image fill without stretching */
+    display: block;
+  }
+#carousel{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform-style: preserve-3d;
+	animation: rotation 20s infinite linear;
+}
+
+#carousel figure{
+	display: block;
+	position: absolute;
+	width: 150px;
+	height: 200px;
+	left: 10px;
+	top: 10px;
+	background: black;
+	overflow: hidden;
+	border: solid 5px black;
+}
+#carousel figure:nth-child(1){transform: rotateY(0deg) translateZ(288px);}
+#carousel figure:nth-child(2) { transform: rotateY(40deg) translateZ(288px);}
+#carousel figure:nth-child(3) { transform: rotateY(80deg) translateZ(288px);}
+#carousel figure:nth-child(4) { transform: rotateY(120deg) translateZ(288px);}
+#carousel figure:nth-child(5) { transform: rotateY(160deg) translateZ(288px);}
+#carousel figure:nth-child(6) { transform: rotateY(200deg) translateZ(288px);}
+#carousel figure:nth-child(7) { transform: rotateY(240deg) translateZ(288px);}
+#carousel figure:nth-child(8) { transform: rotateY(280deg) translateZ(288px);}
+#carousel figure:nth-child(9) { transform: rotateY(320deg) translateZ(288px);}
+
+img{
+
+	cursor: pointer;
+	transition: all .5s ease;
+}
+img:hover{
+
+  transform: scale(1.2,1.2);
+}
+
+@keyframes rotation{
+	from{
+		transform: rotateY(0deg);
+	}
+	to{
+		transform: rotateY(360deg);
+	}
+}
+
+.scratch-font{
+    text-align: center;
+    font-size: xx-large;
+}
+.scratch-container {
+    position: relative;
+    width: 350px;
+    height: 400px;
+    margin: 50px auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .hidden-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    z-index: 0;
+  }
+
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .player {
+    width: 300px;
+   
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background: #1e1e1e;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  .title {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+  }
+
+  .play-btn {
+    background: #d47ad4;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .progress {
+    width: 100%;
+    height: 6px;
+    background: #555;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .progress-filled {
+    height: 100%;
+    background: #76ff03;
+    width: 0%;
+    transition: width 0.1s linear;
+  }
+
+  h1 {
+    color: #ff66b2;
+    font-size: 38px;
+  }
+
+  button {
+    background-color: #ff66b2;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  button:hover {
+    background-color: #ff3385;
+  }
+
+  .letter {
+    text-align: center;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+  }
+
+  #message {
+    font-size: 20px;
+    margin: 20px 0;
+    color: #333;
+  }
+
+  .love-letter {
+    display: none;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #000000;
+  }
