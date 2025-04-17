@@ -124,23 +124,45 @@ audio.addEventListener('timeupdate', () => {
 });
 
 const messages = [
-    "asdagfdsfa!",
-    "gadgadfgasd",
-    "asgdgsfaedASd",
-    "asgasdgadgadg",
-    "sfavadvwefa",
-    "gfadfhsadhad",
-  ];
+  "THINGS",
+  "I LIKE",
+  "ABOUT",
+  "YOU:",
+  "super caring",
+  "super sweet",
+  "the most beautiful girl in the world",
+  "hot asf",
+  "the best at bj",
+  "and last but not the least",
+  "loving me purely and staying by my side even in the most difficult times"
+];
 
-  function showMessage() {
-    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-    document.getElementById('message').innerText = randomMessage;
-  }
+let currentIndex = 0;
+const correctPassword = "092006";
+let isAuthenticated = false;
 
-  function showLoveLetter() {
-    document.getElementById('loveLetter').style.display = 'block';
+function checkPassword() {
+  const userPassword = document.getElementById("passwordInput").value;
+  if (userPassword === correctPassword) {
+    isAuthenticated = true;
+    document.getElementById("passwordContainer").style.display = "none";
+    document.getElementById("content").style.display = "block";
+    showMessage(); // Optional: show first message right away
+  } else {
+    alert("Wrong password! Try again later 💔");
   }
+}
 
-  function showLoveLetter2() {
-    document.getElementById('loveLetter2').style.display = 'block';
-  }
+function showMessage() {
+  if (!isAuthenticated) return;
+  document.getElementById('message').innerText = messages[currentIndex];
+  currentIndex = (currentIndex + 1) % messages.length;
+}
+
+function showLoveLetter() {
+  document.getElementById('loveLetter').style.display = 'block';
+}
+
+function showLoveLetter2() {
+  document.getElementById('loveLetter2').style.display = 'block';
+}
