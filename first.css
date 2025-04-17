@@ -290,3 +290,14 @@ img:hover{
     font-size: 20px;
     color: #000000;
   }
+  #passwordContainer {
+    margin: 20px 0;
+  }
+  
+  #passwordInput {
+    padding: 10px;
+    font-size: 16px;
+    width: 250px;
+    margin-right: 10px;
+  }
+  
